@@ -55,4 +55,17 @@ To set up and run the application, follow these steps:
      uvicorn app.main:app --reload
      ```
 
+## Performance and Asymptotic Analysis
+
+### Time Complexity Analysis
+
+#### API Endpoints
+| Operation | Time Complexity | Description |
+|-----------|----------------|-------------|
+| Create Transaction | O(1) | Direct database insertion with constant-time parent validation |
+| Get Transaction | O(1) | Direct lookup by transaction ID using database index |
+| Get Transactions by Type | O(n) | Linear scan of transactions with type index, where n is the number of transactions of given type |
+| Get Transaction Sum | O(h) | Traversal of transaction tree, where h is the height of the transaction hierarchy |
+
+
 Feel free to explore and implement these enhancements to improve the functionality and performance of the Backend Application.
