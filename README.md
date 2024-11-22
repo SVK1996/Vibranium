@@ -52,7 +52,7 @@ To set up and run the application, follow these steps:
 6. **Start the Application:**
    - Start the application server:
      ```
-    uvicorn app.main:app --reload
+     uvicorn app.main:app --reload
      ```
 
 Feel free to explore and implement these enhancements to improve the functionality and performance of the Backend Application.
