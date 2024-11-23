@@ -4,7 +4,7 @@
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Setup and Run](#setup-and-run)
-4. [Enhancements](#enhancements)
+4. [Performance and Asymptotic Analysis](#peformance)
 
 ## Introduction
 
@@ -59,7 +59,6 @@ To set up and run the application, follow these steps:
 
 ### Time Complexity Analysis
 
-#### API Endpoints
 | Operation | Time Complexity | Description |
 |-----------|----------------|-------------|
 | Create Transaction | O(1) | Direct database insertion with constant-time parent validation |
