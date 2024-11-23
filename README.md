@@ -67,4 +67,4 @@ To set up and run the application, follow these steps:
 | Get Transaction Sum | O(h) | Traversal of transaction tree, where h is the height of the transaction hierarchy |
 
 
-Feel free to explore and implement these enhancements to improve the functionality and performance of the Backend Application.
+Feel free to explore and implement further enhancements to improve the functionality and performance of the Backend Application.
