@@ -1,10 +1,11 @@
 # app/main.py
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .api.endpoints import transaction, auth
-from .core.config import settings
-from .core.cache import setup_cache
-from .core.logging import setup_logging
+from app.api.endpoints import transaction
+from app.core import auth
+from app.core.config import settings
+from app.core.cache import setup_cache
+from app.core.logging import setup_logging
 
 app = FastAPI(
   title=settings.PROJECT_NAME,

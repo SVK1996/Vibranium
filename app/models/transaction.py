@@ -1,15 +1,15 @@
 # app/models/transaction.py
-from sqlalchemy import Column, Integer, Float, String, ForeignKey, DateTime, Index
+from sqlalchemy import Column, Integer, Float, String, ForeignKey, DateTime, Index, Boolean, BigInteger
 from sqlalchemy.sql import func
-from ..database import Base
+from app.database import Base
 
 class Transaction(Base):
   __tablename__ = "transactions"
 
-  id = Column(Integer, primary_key=True)
+  transaction_id = Column(BigInteger, primary_key=True)
   amount = Column(Float, nullable=False)
   type = Column(String, nullable=False)
-  parent_id = Column(Integer, ForeignKey("transactions.id"), nullable=True)
+  parent_id = Column(BigInteger, ForeignKey("transactions.transaction_id"), nullable=True)
   created_at = Column(DateTime(timezone=True), server_default=func.now())
   updated_at = Column(DateTime(timezone=True), onupdate=func.now())
   user_id = Column(Integer, ForeignKey("users.id"), nullable=False)

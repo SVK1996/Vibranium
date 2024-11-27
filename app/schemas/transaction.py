@@ -1,6 +1,6 @@
 # app/schemas/transaction.py
 from pydantic import BaseModel, Field, validator
-from typing import Optional
+from typing import Optional, List
 from datetime import datetime
 
 ValErr = 'Amount must be positive'
@@ -20,7 +20,7 @@ class TransactionCreate(TransactionBase):
   pass
 
 class TransactionResponse(TransactionBase):
-  id: int
+  transaction_id: int
   created_at: datetime
   user_id: int
 
